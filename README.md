@@ -34,10 +34,15 @@ Tetris  w Lua
 
 ✅3.0 Postawowa wersja dekstopowa z obsługą na klawiaturze - minimum 4
 rodzaje klocków
+
 ✅❌3.5 Zapis i odczyt gier (zapis w pliku, ale nie odczyt)
+
 ✅4.0 Dodanie efektów dźwiękowych przy akcjach
+
 ✅4.5 Dodanie animacji przy zbijaniu klocków
+
 ❌5.0 Wersja na iOS lub Android z implementacją touch zamiast klawiatury
+
 
 
 _________________________________________________________________
@@ -63,8 +68,13 @@ Czatbot Rasa Resturacja
 
 ❌3.0 Nalezy zaimplementować minimum 3 ściezki (stories) - wykrywać
 intencję (intent)
+
 ❌3.5 Informację o godzinach otwarcia restauracji nalezy pobierać z
 pliku (action)
+
 ❌4.0 Bot potrafi wyświetlić menu z pliku
+
 ❌4.5 Bot potrafi zebrać zamówienie i je podsumować
+
 ❌5.0 Bot potrafi zebrać adres dostawy
+
