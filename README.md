@@ -12,7 +12,6 @@ Kółko i krzyżyk
 
 _________________________________________________________________
 Task.2
-
 Zamek w Minecraft
 
 ✅3.0 Prosty zamek wykorzystując minimum 5 różnych rodzajów bloków
