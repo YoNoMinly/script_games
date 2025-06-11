@@ -1,8 +1,6 @@
 ---@diagnostic disable: undefined-global
 
 
---5.0 Wersja na iOS lub Android z implementacją touch zamiast klawiatury
-
 local currentPiece = nil
 local dropTimer = 0
 local dropInterval = 0.5
@@ -35,20 +33,19 @@ end
 
 
 function table.show(t, name, indent)
-    local cart     -- a container
-    local autoref  -- for self references
-
+    local cart     
+    local autoref  
     local function isemptytable(t) return next(t) == nil end
 
     local function basicSerialize (o)
       local so = tostring(o)
       if type(o) == "function" then
         local info = debug.getinfo(o, "S")
-        -- info.name is nil because o is not a calling level
+        
         if info.what == "C" then
           return string.format("%q", so .. ", C function")
         else 
-          -- the information is defined through lines
+          
           return string.format("%q", so .. ", defined in (" ..
               info.linedefined .. "-" .. info.lastlinedefined ..
               ")" .. info.source)
@@ -76,7 +73,7 @@ function table.show(t, name, indent)
           autoref = autoref ..  name .. " = " .. saved[value] .. ";\n"
         else
           saved[value] = name
-          -- If this is an empty table, simply add it and return
+          
           if isemptytable(value) then
             cart = cart .. " = {};\n"
           else
@@ -85,7 +82,7 @@ function table.show(t, name, indent)
               k = basicSerialize(k)
               local fname = string.format("%s[%s]", name, k)
               field = string.format("[%s]", k)
-              -- three spaces between levels
+             
               addtocart(v, fname, indent .. "   ", saved, field)
             end
             cart = cart .. indent .. "};\n"
@@ -251,13 +248,13 @@ function clearFullLines()
         else
             linesCleared = linesCleared + 1
             for x = 1, boardWidth do
-                -- Ефект розльоту
+             
                 local direction = math.random() < 0.5 and -1 or 1
                 table.insert(clearedBlocks, {
                     x = (x - 1) * 30,
                     y = (y - 1) * 30,
-                    vx = direction * math.random(100, 300), -- швидкість X
-                    vy = -math.random(100, 200),           -- швидкість Y (вгору)
+                    vx = direction * math.random(100, 300), 
+                    vy = -math.random(100, 200),           
                     alpha = 1,
                     timer = 0
                 })
@@ -312,7 +309,7 @@ function love.update(dt)
     block.timer = block.timer + dt
     block.x = block.x + block.vx * dt
     block.y = block.y + block.vy * dt
-    block.alpha = 1 - block.timer / 1.0 -- плавне зникнення
+    block.alpha = 1 - block.timer / 1.0 
     end
     clearedBlocks = filter(clearedBlocks, function(b) return b.timer < 1.0 end)
 
@@ -348,27 +345,27 @@ function dropPiece()
 end
 
 function saveGame()
-    -- Створення файлу та відкриття для запису
+
     local fileName = "savegame.lua"
 
-    -- Перевіряємо, чи існує вже файл, якщо ні - створюємо його
+
     local file = love.filesystem.newFile(fileName)
 
-    -- Відкриваємо файл для запису
+
     if file:open('w') then
-        -- Основні дані
+
         file:write((playerName or "Unknown") .. "\n")
         file:write((score or 0) .. "\n")
         file:write((love.timer.getTime() or 0) .. "\n")
 
-        -- Перевірка на існування currentPiece
+
         if currentPiece then
-            -- Позиція блоку та час
+
             file:write((currentPiece.x or 0) .. "\n")
             file:write((currentPiece.y or 0) .. "\n")
             file:write((gameTime or 0) .. "\n")
 
-            -- Поточна фігура
+
             if currentPiece.shape then
                 for i = 1, #currentPiece.shape do
                     for j = 1, #currentPiece.shape[i] do
@@ -381,11 +378,11 @@ function saveGame()
             print("Немає поточної фігури!")
         end
 
-        -- Поле гри
+
         if gameBoard then
             for i = 1, #gameBoard do
                 for j = 1, #gameBoard[i] do
-                    file:write((gameBoard[i][j] or 0) .. " ")  -- Запис кожного елементу
+                    file:write((gameBoard[i][j] or 0) .. " ")  
                 end
                 file:write("\n")
             end
@@ -393,7 +390,7 @@ function saveGame()
             file:write("NO_GAMEBOARD\n")
         end
 
-        file:close()  -- Закриваємо файл після запису
+        file:close()  
     else
         print("Не вдалося відкрити файл для запису!")
     end
@@ -502,8 +499,8 @@ function love.draw()
     
 
     if gameOver then
-        love.graphics.setColor(1, 0, 0, 1) -- червоний (R=1, G=0, B=0, A=1)
-        local font = love.graphics.newFont(48) -- великий розмір шрифту 
+        love.graphics.setColor(1, 0, 0, 1) 
+        local font = love.graphics.newFont(48) 
         love.graphics.setFont(font)
         love.graphics.printf("GAME OVER\nPress Enter\n Score:"..score, 0, 200, love.graphics.getWidth(), "center")
         love.graphics.setColor(1, 1, 1, 1)
