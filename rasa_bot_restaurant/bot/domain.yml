@@ -1,0 +1,49 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - is_open
+  - datetime
+  - menu_items
+  - start_order_food
+  - show_order
+  - add_item_to_order
+
+responses:
+  utter_greet:
+  - text: "Welcome to our restaurant! How can i help?"
+
+  utter_did_that_help:
+  - text: "Is that that helpfull?"
+
+  utter_goodbye:
+  - text: "GoodBye!"
+
+  utter_provide_time:
+  - text: "please, specify time"
+
+  utter_start_order:
+    - text: "please, type your order dish"
+
+actions:
+  - action_check_open_hours
+  - action_show_menu
+  - action_order_food
+  - action_show_order
+
+entities:
+- order
+- given_hour
+- food_item
+
+slots:
+  order:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: food_item
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

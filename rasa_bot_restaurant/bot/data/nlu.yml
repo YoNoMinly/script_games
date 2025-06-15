@@ -1,0 +1,86 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: is_open
+  examples: |
+    - is open
+    - is it open?
+    - is the restaurant open
+    - status
+    - available
+    - is the restaurant available
+
+- intent: menu_items
+  examples: |
+    - list of menu
+    - what is on the menu
+    - menu
+    - menu for today
+    - today's menu
+
+- intent: start_order_food
+  examples: |
+    - i would like to order
+    - start order
+    - i want to place an order
+    - can i order
+
+- intent: datetime
+  examples: |
+    - 19 at sunday
+    - monday 15
+    - wednesday 8
+    - friday 6
+    - 13 oclock at monday
+    - 2 saturday
+    - 13 at monday
+    - wednesday 17
+    - sunday at 2
+
+- intent: show_order
+  examples: |
+    - please show my order
+    - show current order
+    - what is ordered
+    - the full order
+    - full order list, please
+    - show the full order list
+    - show order
+
+- intent: add_item_to_order
+  examples: |
+    - I would like to order [Tiramisu](food_item)
+    - can you add [Spaghetti Carbonara](food_item) to my order?
+    - Please include [Pizza](food_item)
+    - please add [Hot-dog](food_item)
+    - add [Burger](food_item)
+    - i want [Lasagne](food_item)

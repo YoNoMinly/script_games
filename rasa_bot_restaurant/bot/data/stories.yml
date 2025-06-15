@@ -1,0 +1,25 @@
+version: "3.1"
+
+stories:
+
+- story: just_open_status
+  steps:
+  - intent: is_open
+  - action: utter_provide_time
+  - intent: datetime
+  - action: action_check_open_hours
+
+- story: show_menu
+  steps:
+  - intent: menu_items
+  - action: action_show_menu
+  - action: utter_did_that_help
+
+- story: order_food_and_show
+  steps:
+  - intent: start_order_food
+  - action: utter_start_order
+  - intent: add_item_to_order
+  - action: action_order_food
+  - intent: show_order
+  - action: action_show_order

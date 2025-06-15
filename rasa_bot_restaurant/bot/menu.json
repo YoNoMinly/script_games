@@ -1,0 +1,34 @@
+{
+  "items": [
+    {
+      "name": "Makaron",
+      "price": 20,
+      "preparation_time": 0.5
+    },
+    {
+      "name": "Ryz",
+      "price": 11,
+      "preparation_time": 0.5
+    },
+    {
+      "name": "Kotlet sh.",
+      "price": 11,
+      "preparation_time": 0.9
+    },
+    {
+      "name": "barsz",
+      "price": 15,
+      "preparation_time": 0.7
+    },
+    {
+      "name": "frytki",
+      "price": 9,
+      "preparation_time": 0.5
+    },
+    {
+      "name": "karpatka",
+      "price": 12,
+      "preparation_time": 0.1
+    }
+  ]
+}
