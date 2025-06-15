@@ -69,15 +69,17 @@ _________________________________________________________________
 Task.5
 Czatbot Rasa Resturacja
 
-❌3.0 Nalezy zaimplementować minimum 3 ściezki (stories) - wykrywać
+(Obecnie nie ma dostępnego nagrania przedstawiającego działanie projektu. Plik .grok oraz plik z modelami znajdują się w archiwum ZIP, ponieważ ich rozmiar przekracza dopuszczalny limit ustalony przez Git.)
+
+✅3.0 Nalezy zaimplementować minimum 3 ściezki (stories) - wykrywać
 intencję (intent)
 
-❌3.5 Informację o godzinach otwarcia restauracji nalezy pobierać z
+✅3.5 Informację o godzinach otwarcia restauracji nalezy pobierać z
 pliku (action)
 
-❌4.0 Bot potrafi wyświetlić menu z pliku
+✅4.0 Bot potrafi wyświetlić menu z pliku
 
-❌4.5 Bot potrafi zebrać zamówienie i je podsumować
+✅4.5 Bot potrafi zebrać zamówienie i je podsumować
 
-❌5.0 Bot potrafi zebrać adres dostawy
+✅5.0 Bot potrafi zebrać adres dostawy
 
