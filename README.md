@@ -8,8 +8,9 @@ Kółko i krzyżyk
 
 ✅5.0 - pozwala na grę z komputerem.
 
+folder:bash_tictaktoe
 
-
+https://github.com/YoNoMinly/script_games/tree/main/bash_tictaktoe
 _________________________________________________________________
 Task.2
 Zamek w Minecraft
@@ -25,8 +26,9 @@ Zamek w Minecraft
 ✅5.0 Zamek ma minimum dwa poziomy (piętra) na które można wejść z
 zewnątrz
 
+folder:minecraft_castle_js
 
-
+https://github.com/YoNoMinly/script_games/tree/main/minecraft_castle_js
 _________________________________________________________________
 Task.3
 Tetris  w Lua
@@ -42,8 +44,9 @@ rodzaje klocków
 
 ❌5.0 Wersja na iOS lub Android z implementacją touch zamiast klawiatury
 
+folder:tetris_lua
 
-
+https://github.com/YoNoMinly/script_games/tree/main/tetris_lua
 _________________________________________________________________
 Task.4
 Mario w Ruby2d
@@ -59,8 +62,9 @@ można wpaść i zginąć
 
 ✅5.0 Generator poziomów
 
+folder:mario_ruby
 
-
+https://github.com/YoNoMinly/script_games/tree/main/mario_ruby
 _________________________________________________________________
 Task.5
 Czatbot Rasa Resturacja
