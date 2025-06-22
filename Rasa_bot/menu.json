@@ -1,0 +1,34 @@
+{
+  "items": [
+    {
+      "name": "makaron",
+      "price": 9,
+      "preparation_time": 0.5
+    },
+    {
+      "name": "barcz",
+      "price": 11,
+      "preparation_time": 1
+    },
+    {
+      "name": "frytki",
+      "price": 5,
+      "preparation_time": 0.3
+    },
+    {
+      "name": "pina-kolada",
+      "price": 10,
+      "preparation_time": 0.1
+    },
+    {
+      "name": "kola",
+      "price": 7,
+      "preparation_time": 0
+    },
+    {
+      "name": "karpatka",
+      "price": 10,
+      "preparation_time": 0
+    }
+  ]
+}

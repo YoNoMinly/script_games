@@ -1,0 +1,60 @@
+
+
+stories:
+- story: greeting and goodbye
+  steps:
+  - user: |
+      hey
+    intent: greet
+  - action: utter_greet
+  - user: |
+      bye
+    intent: goodbye
+  - action: utter_goodbye
+
+- story: check restaurant hours with datetime
+  steps:
+  - user: |
+      sunday at 2
+    intent: datetime
+  - action: action_check_open_hours
+
+- story: start order flow
+  steps:
+  - user: |
+      i would like to order
+    intent: start_order_food
+  - action: utter_start_order
+
+- story: show full order
+  steps:
+  - user: |
+      show current order
+    intent: show_order
+  - action: action_show_order
+
+- story: combined: greet, ask time, start order
+  steps:
+  - user: |
+      hello
+    intent: greet
+  - action: utter_greet
+  - user: |
+      monday 15
+    intent: datetime
+  - action: action_check_open_hours
+  - user: |
+      can I order?
+    intent: start_order_food
+  - action: utter_start_order
+
+- story: quick check then goodbye
+  steps:
+  - user: |
+      wednesday at 8
+    intent: datetime
+  - action: action_check_open_hours
+  - user: |
+      goodbye
+    intent: goodbye
+  - action: utter_goodbye
