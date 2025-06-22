@@ -69,7 +69,7 @@ _________________________________________________________________
 Task.5
 Czatbot Rasa Resturacja
 
-(Obecnie nie ma dostępnego nagrania przedstawiającego działanie projektu. Plik .grok oraz plik z modelami znajdują się w archiwum ZIP, ponieważ ich rozmiar przekracza dopuszczalny limit ustalony przez Git. Zmienne slack_token, slack_signing_secret oraz slack_channel zostały zastąpione znakiem "_". )
+( Plik .grok oraz plik z modelami znajdują się w archiwum ZIP, ponieważ ich rozmiar przekracza dopuszczalny limit ustalony przez Git. Zmienne slack_token, slack_signing_secret oraz slack_channel zostały zastąpione " ". )
 
 ✅3.0 Nalezy zaimplementować minimum 3 ściezki (stories) - wykrywać
 intencję (intent)
@@ -83,7 +83,7 @@ pliku (action)
 
 ✅5.0 Bot potrafi zebrać adres dostawy
 
-folder:rasa_bot_restaurant
+folder:Rasa_bot
 
-https://github.com/YoNoMinly/script_games/tree/main/rasa_bot_restaurant
+https://github.com/YoNoMinly/script_games/tree/main/Rasa_bot
 
